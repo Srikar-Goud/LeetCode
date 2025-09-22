@@ -1,0 +1,12 @@
+class Solution {
+    public int maxSubArray(int[] nums) {
+        int maxVar = nums[0];
+        int curVar = nums[0];
+        int n = nums.length;
+        for(int i = 1;i<n;i++){
+            curVar = Math.max(nums[i],curVar + nums[i]);
+            maxVar = Math.max(maxVar,curVar);
+        }
+        return maxVar;
+    }
+}
